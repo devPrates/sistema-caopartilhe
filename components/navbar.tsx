@@ -2,18 +2,17 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-import { Button } from '@/components/ui/button';
+import { Button, buttonVariants } from '@/components/ui/button';
 import { Menu as MenuIcon, X as XIcon } from 'lucide-react';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation'; // Importando usePathname
 import { SignedIn, SignedOut, SignInButton, SignUpButton, UserButton } from '@clerk/nextjs';
+import { cn } from '@/lib/utils';
 
 const menuItems = [
     { name: 'Home', href: '/' },
     { name: 'Anuncios', href: '/Anuncios' },
     { name: 'Adoção', href: '/adote' },
-    { name: 'Perdidos', href: '/perdidos' },
-    { name: 'Encontrados', href: '/encontrados' },
     { name: 'Sobre', href: '/sobre' },
 ];
 
@@ -51,6 +50,7 @@ export default function Navbar() {
                         <SignUpButton />
                     </SignedOut>
                     <SignedIn>
+                        <Link href="/dashboard" className={cn(buttonVariants({ variant: "outline" }))}>Dashboard</Link>
                         <UserButton />
                     </SignedIn>
                 </div>

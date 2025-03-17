@@ -1,3 +1,4 @@
+import Navbar from "@/components/navbar";
 import prisma from "@/lib/db";
 import { currentUser } from "@clerk/nextjs/server";
 import { Metadata } from "next";
@@ -30,6 +31,7 @@ export default async function dashboardLayout({
     }
     return(
         <main>
+            <Navbar />
             {children}
         </main>
     )
