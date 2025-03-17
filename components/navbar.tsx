@@ -56,7 +56,14 @@ export default function Navbar() {
                 </div>
 
                 {/* Botão Menu Mobile */}
-                <div className="flex md:hidden justify-end">
+                <div className="flex md:hidden justify-end space-x-3">
+                    <SignedOut>
+                        <SignInButton />
+                        <SignUpButton />
+                    </SignedOut>
+                    <SignedIn>
+                        <UserButton />
+                    </SignedIn>
                     <button onClick={() => setIsOpen(!isOpen)} className="focus:outline-none">
                         {isOpen ? <XIcon size={24} /> : <MenuIcon size={24} />}
                     </button>
@@ -76,9 +83,8 @@ export default function Navbar() {
                         </Link>
                     ))}
 
-                    <Link href="/login" >
-                        <Button className="w-full rounded-none">Login</Button>
-                    </Link>
+                    <Link href="/dashboard" className={cn(buttonVariants({ variant: "outline" }))}>Dashboard</Link>
+
                 </div>
             )}
         </nav>
