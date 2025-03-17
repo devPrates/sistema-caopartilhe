@@ -12,7 +12,7 @@ import { cn } from '@/lib/utils';
 const menuItems = [
     { name: 'Home', href: '/' },
     { name: 'Anuncios', href: '/Anuncios' },
-    { name: 'Adoção', href: '/adote' },
+    { name: 'Doações', href: '/doacoes' },
     { name: 'Sobre', href: '/sobre' },
 ];
 
