@@ -1,9 +1,9 @@
 
-export default function DashboardPage() {
+export default function NovoAnuncios() {
     return (
         <section className="flex">
             <div>
-                <h1>Bem vindo a dashboard</h1>
+                <h1>Bem vindo a Página de criação de Anúncios</h1>
             </div>
         </section>
     )

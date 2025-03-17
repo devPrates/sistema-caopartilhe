@@ -1,9 +1,9 @@
 
-export default function DashboardPage() {
+export default function NotificacaoPage() {
     return (
         <section className="flex">
             <div>
-                <h1>Bem vindo a dashboard</h1>
+                <h1>Bem vindo a Página de Notificações</h1>
             </div>
         </section>
     )
